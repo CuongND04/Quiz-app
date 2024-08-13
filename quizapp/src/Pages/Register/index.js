@@ -18,7 +18,7 @@ function Register() {
         fullName: fullName,
         email: email,
         password: password,
-        token: generateToken(),
+        token: generateToken(20),
       };
 
       const response = await register(options);
