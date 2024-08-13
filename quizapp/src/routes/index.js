@@ -8,6 +8,7 @@ import Answers from "../Pages/Answers";
 import Quiz from "../Pages/Quiz";
 import Result from "../Pages/Result";
 import Topic from "../Pages/Topic";
+import Logout from "../Pages/Logout";
 
 export const routes = [
   {
@@ -25,6 +26,10 @@ export const routes = [
       {
         path: "/register",
         element: <Register />,
+      },
+      {
+        path: "/logout",
+        element: <Logout />,
       },
       {
         element: <PrivateRouter />,

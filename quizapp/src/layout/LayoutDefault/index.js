@@ -1,6 +1,10 @@
 import { NavLink, Outlet } from "react-router-dom";
 import "./LayoutDefault.scss";
+import { getCookie } from "../../helper/cookie";
+import { useSelector } from "react-redux";
 function LayoutDefault() {
+  const token = getCookie("token");
+  const isLogin = useSelector((state) => state.loginReducer);
   return (
     <>
       <div className="layout-default">
@@ -11,17 +15,29 @@ function LayoutDefault() {
               <li>
                 <NavLink to="/">Home</NavLink>
               </li>
-              <li>
-                <NavLink to="/topic">Topic</NavLink>
-              </li>
-              <li>
-                <NavLink to="/answers">Answers</NavLink>
-              </li>
+              {token && (
+                <>
+                  <li>
+                    <NavLink to="/topic">Topic</NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/answers">Answers</NavLink>
+                  </li>
+                </>
+              )}
             </ul>
           </div>
           <div className="layout-default__account">
-            <NavLink to="/login">Đăng nhập</NavLink>
-            <NavLink to="/register">Đăng ký</NavLink>
+            {token ? (
+              <>
+                <NavLink to="/logout">Đăng xuất</NavLink>
+              </>
+            ) : (
+              <>
+                <NavLink to="/login">Đăng nhập</NavLink>
+                <NavLink to="/register">Đăng ký</NavLink>
+              </>
+            )}
           </div>
         </header>
         <main className="layout-default__main">
