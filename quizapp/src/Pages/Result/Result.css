@@ -1,0 +1,18 @@
+.result__tag--true {
+  color: green;
+}
+
+.result__tag--false {
+  color: red;
+}
+
+.result__item--selected {
+  color: red;
+}
+
+
+.result__item--result {
+  color: green;
+  font-weight: 600;
+  text-decoration: underline;
+}

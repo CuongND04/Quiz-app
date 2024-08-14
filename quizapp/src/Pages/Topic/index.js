@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { getListTopic } from "../../services/topicService";
 function Topic() {
   const [topics, setTopics] = useState([]);
