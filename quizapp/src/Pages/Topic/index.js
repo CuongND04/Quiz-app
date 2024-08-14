@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getListTopic } from "../../services/topicService";
+import "./style.css";
 function Topic() {
   const [topics, setTopics] = useState([]);
   useEffect(() => {
@@ -11,14 +12,14 @@ function Topic() {
   }, []);
   return (
     <>
-      <h2>Danh sach chu de on luyen</h2>
+      <h2>Danh sách chủ đề ôn luyện</h2>
       <div>
-        <table>
+        <table className="table__topic">
           <thead>
             <tr>
-              <th>ID</th>
-              <th>Ten chu de</th>
-              <th></th>
+              <th>Mã đề</th>
+              <th>Tên chủ đề</th>
+              <th>Hành động</th>
             </tr>
           </thead>
           <tbody>

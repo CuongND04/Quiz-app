@@ -1,9 +1,25 @@
+.result__tag {
+  margin-left: 20px;
+  text-align: center;
+  padding: 5px 8px;
+
+}
+
 .result__tag--true {
-  color: green;
+  /* color: green; */
+  background-color: green;
+  color: white;
+  font-weight: 600;
+  border-radius: 5px;
+  align-items: center;
 }
 
 .result__tag--false {
-  color: red;
+  background-color: red;
+  color: white;
+  font-weight: 600;
+  border-radius: 5px;
+  align-items: center;
 }
 
 .result__item--selected {
@@ -15,4 +31,28 @@
   color: green;
   font-weight: 600;
   text-decoration: underline;
+}
+
+.description {
+  margin: 20px 0;
+}
+
+.description span {
+  font-weight: 700;
+}
+
+.result__list {
+  border: 1px solid #ddd;
+  padding: 20px 40px;
+}
+
+.btn__submit {
+  width: 30%;
+  margin-top: 20px;
+  padding: 20px;
+
+}
+
+.btn__submit--container {
+  text-align: center;
 }

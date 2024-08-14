@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getAnswersByUserId } from "../../services/answersService";
 import { getListTopic } from "../../services/topicService";
 import { Link } from "react-router-dom";
-
+import "./answers.css";
 function Answers() {
   const [dataAnswers, setDataAnswers] = useState([]);
   useEffect(() => {
@@ -24,17 +24,17 @@ function Answers() {
   return (
     <>
       <h2>Danh sách bài đã luyện tập</h2>
-      <table>
+      <table className="table__answer">
         <thead>
           <tr>
-            <th>ID</th>
-            <th>Ten chu de</th>
-            <th></th>
+            <th>Mã</th>
+            <th>Tên chủ đề</th>
+            <th>Hành động</th>
           </tr>
         </thead>
         <tbody>
           {dataAnswers.map((item) => (
-            <tr key={item.id}>
+            <tr className="table__answer--item" key={item.id}>
               <td>{item.id}</td>
               <td>{item.name}</td>
               <td>

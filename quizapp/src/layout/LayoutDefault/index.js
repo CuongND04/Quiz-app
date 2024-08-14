@@ -9,7 +9,7 @@ function LayoutDefault() {
     <>
       <div className="layout-default">
         <header className="layout-default__header">
-          <div className="layout-default__logo">Quiz</div>
+          <div className="layout-default__logo">QUIZ</div>
           <div className="menu">
             <ul>
               <li>
@@ -34,8 +34,10 @@ function LayoutDefault() {
               </>
             ) : (
               <>
-                <NavLink to="/login">Đăng nhập</NavLink>
-                <NavLink to="/register">Đăng ký</NavLink>
+                <div className="authentication">
+                  <NavLink to="/login">Đăng nhập</NavLink>
+                  <NavLink to="/register">Đăng ký</NavLink>
+                </div>
               </>
             )}
           </div>

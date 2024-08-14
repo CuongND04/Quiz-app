@@ -7,7 +7,16 @@
     padding: 10px 20px;
   }
 
+  &__logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+  }
 
+  a {
+    text-decoration: none;
+    color: white;
+  }
 
   &__main {
     padding: 20px;
@@ -20,6 +29,8 @@
   }
 }
 
+
+
 .menu {
   ul {
     list-style: none;
@@ -28,9 +39,24 @@
     display: flex;
 
     li {
-      margin-left: 20px;
+
       position: relative;
+
+      a {
+        margin: 0 20px;
+        padding: 15px;
+
+        &:hover {
+          background-color: orangered;
+        }
+
+        &.active {
+          background-color: orangered;
+        }
+
+      }
     }
+
   }
 
   &__link {
@@ -65,4 +91,16 @@
     display: flex !important;
   }
 
+}
+
+.authentication {
+  a:first-child {
+    margin-right: 20px;
+  }
+}
+
+.layout-default__main {
+  padding: 0 40px;
+  margin: 40px 0;
+  min-height: 79vh;
 }

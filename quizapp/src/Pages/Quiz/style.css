@@ -1,0 +1,31 @@
+.title__question {
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: 550;
+}
+
+.form-quiz {
+  border: 1px solid #ddd;
+  padding: 20px 40px;
+}
+
+.form-quiz__answer {
+  margin-left: 10px;
+}
+
+.form-quiz__answer input {
+  margin-right: 15px;
+}
+
+.form-quiz__item {
+  margin: 15px 0;
+}
+
+.btn__submit {
+  width: 20%;
+  font-size: 20px;
+}
+
+.btn__submit--container {
+  align-items: center;
+}

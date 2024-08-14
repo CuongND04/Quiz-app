@@ -4,6 +4,7 @@ import { getTopic } from "../../services/topicService";
 import { getListQuestion } from "../../services/questionService";
 import { getCookie } from "../../helper/cookie";
 import { createAnswer } from "../../services/quizService";
+import "./style.css";
 function Quiz() {
   const params = useParams();
   const [dataTopic, setDataTopic] = useState();
@@ -49,14 +50,14 @@ function Quiz() {
   };
   return (
     <>
-      Bài Quiz chủ đề: {dataTopic && <>{dataTopic.name}</>}
+      <h2>Bài Quiz chủ đề: {dataTopic && <>{dataTopic.name}</>}</h2>
       <div className="form-quiz">
         <form onSubmit={handleSubmit}>
           {dataQuestions.map((item, index) => (
             <div className="form-quiz__item" key={item.id}>
-              <p>
+              <div className="title__question">
                 Câu {index + 1}: {item.question}
-              </p>
+              </div>
               {item.answers.map((itemAns, indexAns) => (
                 <div className="form-quiz__answer" key={indexAns}>
                   <input
@@ -72,7 +73,11 @@ function Quiz() {
               ))}
             </div>
           ))}
-          <button type="submit">Nộp bài</button>
+          <div className="btn__submit--container">
+            <button className="btn__submit" type="submit">
+              Nộp bài
+            </button>
+          </div>
         </form>
       </div>
     </>
